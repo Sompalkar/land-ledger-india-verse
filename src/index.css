@@ -136,7 +136,7 @@
   }
 
   .feature-card {
-    @apply bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 group;
+    @apply bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300;
   }
 
   .nav-link {
@@ -168,3 +168,4 @@
 .animation-delay-900 {
   animation-delay: 900ms;
 }
+
