@@ -55,13 +55,13 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4 animate-fade-in">
             How LandLedger Works
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-lg text-gray-700 dark:text-gray-300 animate-fade-in animation-delay-300">
             A simple, secure process for managing your land records on the blockchain
           </p>
         </div>
@@ -74,7 +74,8 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div 
                 key={index}
-                className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} mb-12 md:mb-24 animate-fade-in`}
+                style={{ animationDelay: `${index * 200}ms` }}
               >
                 {/* Step Content */}
                 <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:text-left md:pl-12'}`}>

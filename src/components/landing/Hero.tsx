@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between py-16 md:py-24 gap-12">
           {/* Hero Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
+          <div className="w-full lg:w-1/2 space-y-6 hero-animation">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-land-50 text-land-700 border border-land-200 dark:bg-land-900/30 dark:text-land-300 dark:border-land-800 mb-4">
               <span className="flex h-2 w-2 rounded-full bg-land-500 mr-2"></span>
               Transforming Land Registry in India
@@ -47,15 +47,15 @@ const Hero = () => {
             
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 mt-4 border-t border-gray-200 dark:border-gray-800">
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-left animate-fade-in animation-delay-300">
                 <div className="text-3xl font-bold text-land-700 dark:text-land-400">65%</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">Reduction in Land Disputes</div>
               </div>
-              <div className="text-center">
+              <div className="text-center animate-fade-in animation-delay-600">
                 <div className="text-3xl font-bold text-land-700 dark:text-land-400">10M+</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">Land Records Digitized</div>
               </div>
-              <div className="text-center sm:text-right">
+              <div className="text-center sm:text-right animate-fade-in animation-delay-900">
                 <div className="text-3xl font-bold text-land-700 dark:text-land-400">90%</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">Faster Property Registration</div>
               </div>
@@ -63,10 +63,10 @@ const Hero = () => {
           </div>
           
           {/* Hero Image/Illustration */}
-          <div className="w-full lg:w-1/2 relative">
+          <div className="w-full lg:w-1/2 relative hero-animation animation-delay-300">
             <div className="relative w-full aspect-square max-w-md mx-auto">
               {/* Main Image */}
-              <div className="absolute inset-0 rounded-2xl overflow-hidden border-2 border-land-200 dark:border-land-700 bg-white dark:bg-gray-800 shadow-xl">
+              <div className="absolute inset-0 rounded-2xl overflow-hidden border-2 border-land-200 dark:border-land-700 bg-white dark:bg-gray-800 shadow-xl glass-card">
                 <img 
                   src="https://images.unsplash.com/photo-1460472178825-e5240623afd5?q=80&w=2069" 
                   alt="Digital Land Registry"
@@ -82,7 +82,7 @@ const Hero = () => {
               </div>
               
               {/* Floating Cards */}
-              <div className="absolute -top-6 -left-6 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover">
+              <div className="absolute -top-6 -left-6 w-36 glass-card rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover animate-fade-in animation-delay-600">
                 <div className="flex items-center space-x-3">
                   <div className="bg-land-50 dark:bg-land-900/30 p-2 rounded-md">
                     <FileText className="h-5 w-5 text-land-600 dark:text-land-400" />
@@ -94,7 +94,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -right-6 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover">
+              <div className="absolute -bottom-6 -right-6 w-40 glass-card rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover animate-fade-in animation-delay-900">
                 <div className="flex items-center space-x-3">
                   <div className="bg-saffron-50 dark:bg-saffron-900/30 p-2 rounded-md">
                     <Shield className="h-5 w-5 text-saffron-600 dark:text-saffron-400" />
@@ -106,7 +106,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -right-10 transform -translate-y-1/2 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover hidden md:block">
+              <div className="absolute top-1/2 -right-10 transform -translate-y-1/2 w-40 glass-card rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700 card-hover hidden md:block animate-fade-in animation-delay-1200">
                 <div className="flex items-center space-x-3">
                   <div className="bg-green-50 dark:bg-green-900/30 p-2 rounded-md">
                     <BarChart3 className="h-5 w-5 text-green-600 dark:text-green-400" />

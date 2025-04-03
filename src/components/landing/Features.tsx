@@ -10,6 +10,7 @@ import {
   Building,
   Scale
 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
   const features = [
@@ -64,10 +65,10 @@ const Features = () => {
     <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4 animate-fade-in">
             Revolutionizing Land Registry in India
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-lg text-gray-700 dark:text-gray-300 animate-fade-in animation-delay-300">
             Our platform combines cutting-edge blockchain technology with user-friendly 
             interfaces to create a transparent and efficient land registry system.
           </p>
@@ -75,11 +76,12 @@ const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <Card 
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 group"
+              className="feature-card overflow-hidden animate-fade-in"
+              style={{ animationDelay: `${(index * 100) + 300}ms` }}
             >
-              <div className="p-6">
+              <CardContent className="p-6">
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4 group-hover:bg-land-50 dark:group-hover:bg-land-900/30 transition-colors duration-300">
                   {feature.icon}
                 </div>
@@ -89,8 +91,8 @@ const Features = () => {
                 <p className="text-gray-600 dark:text-gray-400">
                   {feature.description}
                 </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
