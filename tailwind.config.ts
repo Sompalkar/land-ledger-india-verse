@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,46 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Land Ledger custom colors
+				land: {
+					50: '#F0F7FA',
+					100: '#DCF0F5',
+					200: '#B3DEEA',
+					300: '#81C8DB',
+					400: '#4EAFC9',
+					500: '#2E94AF',
+					600: '#247692',
+					700: '#1A5A74',
+					800: '#144057',
+					900: '#0E2939',
+					950: '#081A25',
+				},
+				soil: {
+					50: '#FAF6F0',
+					100: '#F5EDE0',
+					200: '#EBDBC0',
+					300: '#DFC7A0',
+					400: '#D0B07B',
+					500: '#C09956',
+					600: '#A17C3F',
+					700: '#7C5F2F',
+					800: '#574220',
+					900: '#342710',
+					950: '#1F1708',
+				},
+				saffron: {
+					50: '#FFF8EE',
+					100: '#FFEDD6',
+					200: '#FFD9AC',
+					300: '#FFC183',
+					400: '#FFA54A',
+					500: '#FF8412',
+					600: '#E06400',
+					700: '#A84B00',
+					800: '#703200',
+					900: '#381900',
+					950: '#1C0C00',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,12 +125,45 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-position': '0% 50%',
+					},
+					'50%': {
+						'background-position': '100% 50%',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+			},
+			backgroundImage: {
+				'hero-pattern': "url('/hero-pattern.svg')",
+				'gradient-land': 'linear-gradient(135deg, #1A5A74 0%, #0E2939 100%)',
+				'gradient-soil': 'linear-gradient(135deg, #A17C3F 0%, #574220 100%)',
+				'gradient-saffron': 'linear-gradient(135deg, #FF8412 0%, #A84B00 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
